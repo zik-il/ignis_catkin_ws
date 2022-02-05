@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+    <!-- We launch the tail wag manager, usefull for simulation or real alike-->
+    <node   name="tail_wag_node"
+            pkg="ignisbot_move_pkg"
+            type="tail_wag.py"
+            respawn="false"
+            output="screen"
+            args="">
+    </node>
+
+</launch>

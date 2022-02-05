@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+    <arg name="simulated_camera" default="false" />
+    <arg name="camera_pan_angle" default="-0.605" />
+    <arg name="mode" default="get_data" />
+    <arg name="device_to_use" default="cpu" />
+    <arg name="csi_camera" default="true" />
+    <arg name="plot_images" default="true" />
+    <arg name="max_angular_speed" default="0.2" />
+    <arg name="move_speed" default="0.1" />
+
+
+    <node   name="collision_avoidance_training_node"
+            pkg="jetbot_collision_avoidance_pkg"
+            type="collision_avoidance_training.py"
+            respawn="false"
+            output="screen"
+            args="$(arg simulated_camera) $(arg camera_pan_angle) $(arg mode) $(arg device_to_use) $(arg csi_camera) $(arg plot_images) $(arg max_angular_speed) $(arg move_speed)">
+    </node>
+
+    <node   name="simplegui_node"
+            pkg="jetbot_collision_avoidance_pkg"
+            type="simplegui.py"
+            respawn="false"
+            output="screen"
+            args="">
+    </node>
+
+    <include file="$(find ignisbot_move_pkg)/launch/ignis_real_drivers.launch"/>
+
+</launch>

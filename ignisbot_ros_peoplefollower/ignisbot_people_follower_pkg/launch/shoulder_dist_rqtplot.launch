@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+    <node name="rqt_plot" pkg="rqt_plot" type="rqt_plot"                                                                                              
+    args="/shoulder_distance/data /cm_vel/linear/x" />     
+</launch>

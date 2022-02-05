@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+    <include file="$(find ignisbot_people_follower_pkg)/launch/ignisbot_sim_peopletracker_cuda.launch"/>
+    <include file="$(find ignisbot_people_follower_pkg)/launch/ignis_sim_people_follower.launch"/>
+</launch>

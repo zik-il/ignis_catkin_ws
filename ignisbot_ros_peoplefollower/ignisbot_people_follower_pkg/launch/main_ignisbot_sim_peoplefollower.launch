@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+    <include file="$(find ignisbot_people_follower_pkg)/launch/ignisbot_peopletracker.launch"/>
+    <include file="$(find ignisbot_people_follower_pkg)/launch/ignis_people_follower.launch"/>
+    <include file="$(find ignisbot_move_pkg)/launch/ignis_sim_drivers.launch"/>
+
+</launch>

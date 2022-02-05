@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+    <include file="$(find ignisbot_people_follower_pkg)/launch/ignisbot_sim_peopletracker.launch"/>
+    <include file="$(find ignisbot_people_follower_pkg)/launch/ignis_sim_people_follower.launch">
+        <arg name="max_angular_speed" default="0.1" />
+        <arg name="move_speed" default="0.1" />
+    </include>
+</launch>

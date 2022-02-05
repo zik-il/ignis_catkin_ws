@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+
+    <arg name="do_benchmark" default="false" />
+    <arg name="device_to_use" default="cpu" />
+    <arg name="csi_camera" default="true" />
+    <arg name="plot_images" default="true" />
+
+    <node   name="ignis_peopletracker_node"
+            pkg="ignisbot_people_follower_pkg"
+            type="peopletracker.py"
+            respawn="false"
+            output="screen"
+            args="$(arg do_benchmark) $(arg device_to_use) $(arg csi_camera) $(arg plot_images)">
+    </node>
+
+</launch>
